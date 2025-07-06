@@ -30,3 +30,5 @@ document.querySelectorAll('.search-tab').forEach(tab => {
         activePane.classList.add('active');
     });
 });
+
+

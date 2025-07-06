@@ -213,28 +213,42 @@
         <div class="container my-5">
             <!-- Top Promo Banners -->
             <div class="row g-3 mt-5">
-                <div class="col-md-4" >
+                <div class="col-md-6" >
                     <div class="p-3 rounded text-white" style="background: linear-gradient(90deg, #660033, #a3476a);">
                         <h5>Summer sale</h5>
                         <p>Save up to 40% on travel</p>
                         <button class="btn btn-light btn-sm">Explore now</button>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="p-3 rounded text-white" style="background:linear-gradient(90deg, #660033, #a3476a);">
-                        <h6>SUPER DESTINATION</h6>
-                        <h5>Explore Hong Kong</h5>
-                        <p>Save up to <strong>50%</strong></p>
-                        <button class="btn btn-warning btn-sm">View Deals</button>
+                <div class="col-md-6">
+                    <div id="destinationCarousel" class="carousel slide rounded" data-bs-ride="carousel" style="height: 150px;">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner h-100">
+                            <div class="carousel-item active h-100">
+                                <img src="https://images.unsplash.com/photo-1536599018102-9f803c140fc1?auto=format&fit=crop&w=800&q=80" class="d-block w-100 h-100" style="object-fit: cover;" alt="Hong Kong">
+                            </div>
+                            <div class="carousel-item h-100">
+                                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80" class="d-block w-100 h-100" style="object-fit: cover;" alt="Tokyo">
+                            </div>
+                            <div class="carousel-item h-100">
+                                <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80" class="d-block w-100 h-100" style="object-fit: cover;" alt="Bangkok">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#destinationCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#destinationCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="p-3 rounded text-white" style="background: linear-gradient(90deg, #a3476a, #660033);">
-                        <h5>Attractions & Tours</h5>
-                        <p>Up to <strong>25% OFF</strong></p>
-                        <button class="btn btn-light btn-sm">Book Now</button>
-                    </div>
-                </div>
+
             </div>
 
             <!-- Welcome Pack -->
@@ -278,86 +292,97 @@
             </div>
         </div>
 
-        <div class="container mt-5">
-            <h4 class="mb-3">Featured Properties</h4>
-            <div class="d-flex gap-4 mb-3">
-                <span><i class="bi bi-check-circle text-success"></i> We Price Match</span>
-                <span><i class="bi bi-building text-warning"></i> Hotel Booking Guarantee</span>
-                <span><i class="bi bi-shield-lock text-primary"></i> Hotel Stay Guarantee</span>
-            </div>
-
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-                <!-- Property Card 1 -->
-                <div class="col-md-4">
-                    <div class="card position-relative h-100">
-                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Hilton Atlanta">
-                        <div class="position-absolute top-0 start-0 bg-dark text-white px-2 py-1 small rounded-end">
-                            Atlanta</div>
-                        <div class="card-body">
-                            <h6 class="card-title mb-1">Hilton Atlanta</h6>
-                            <p class="mb-1">
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-half text-warning"></i>
-                            </p>
-                            <p class="mb-1"><span class="badge bg-primary">8.5/10</span> 211 reviews</p>
-                            <p class="text-end fw-bold">$195</p>
+        <!-- Featured Properties Section -->
+        <div class="container my-5" id="featured-properties-section">
+            <div class="bg-white rounded-4 shadow-sm p-4" style="background: linear-gradient(to top, #660033, #d16a92);">
+                <h2 class="fw-bold mb-3 text-white" style="font-size:2rem;">Featured Properties</h2>
+                <div class="d-flex flex-wrap gap-4 mb-4 align-items-center" style="font-size:1.1rem;">
+                    <span class="d-flex align-items-center gap-2 text-white"><i class="bi bi-check-circle text-success"></i> <span class="fw-semibold">We Price Match</span></span>
+                    <span class="d-flex align-items-center gap-2 text-white"><i class="bi bi-building text-warning"></i> <span class="fw-semibold">Hotel Booking Guarantee</span></span>
+                    <span class="d-flex align-items-center gap-2 text-white"><i class="bi bi-shield-lock text-primary"></i> <span class="fw-semibold">Hotel Stay Guarantee</span></span>
+                </div>
+                <div class="row g-4">
+                    <!-- Property Card 1 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 rounded-4 shadow-sm border-0">
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" class="card-img-top rounded-top-4" alt="Hilton Atlanta">
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold mb-2">Hilton Atlanta</h6>
+                                <p class="mb-2">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-half text-warning"></i>
+                                </p>
+                                <span class="badge bg-primary" style="font-size:1rem;">8.5/10</span>
+                                <a href="#" class="ms-2 text-decoration-none fw-semibold" style="color:#1756e5;">(211 reviews)</a>
+                                <p class="text-end fw-bold mt-2">$195</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Property Card 2 -->
-                <div class="col-md-4">
-                    <div class="card position-relative h-100">
-                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Atlanta Marriott Marquis">
-                        <div class="position-absolute top-0 start-0 bg-dark text-white px-2 py-1 small rounded-end">
-                            Atlanta</div>
-                        <div class="card-body">
-                            <h6 class="card-title mb-1">Atlanta Marriott Marquis</h6>
-                            <p class="mb-1">
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                            </p>
-                            <p class="mb-1"><span class="badge bg-primary">9.0/10</span> 72 reviews</p>
-                            <p class="text-danger small mb-1">Free Cancellation</p>
-                            <p class="text-end fw-bold">$236</p>
+                    <!-- Property Card 2 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 rounded-4 shadow-sm border-0">
+                            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" class="card-img-top rounded-top-4" alt="Atlanta Marriott Marquis">
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold mb-2">Atlanta Marriott Marquis</h6>
+                                <p class="mb-2">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </p>
+                                <span class="badge bg-primary" style="font-size:1rem;">9.0/10</span>
+                                <a href="#" class="ms-2 text-decoration-none fw-semibold" style="color:#1756e5;">(72 reviews)</a>
+                                <p class="text-danger small mb-1">Free Cancellation</p>
+                                <p class="text-end fw-bold">$236</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Property Card 3 (optional) -->
-                <div class="col-md-4">
-                    <div class="card position-relative h-100">
-                        <img src="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=600&q=80" style="height: 200px;" class="card-img-top" alt="Westin Peachtree Plaza">
-                        <div class="position-absolute top-0 start-0 bg-dark text-white px-2 py-1 small rounded-end">
-                            Atlanta</div>
-                        <div class="card-body">
-                            <h6 class="card-title mb-1">The Westin Peachtree Plaza</h6>
-                            <p class="mb-1">
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star text-warning"></i>
-                            </p>
-                            <p class="mb-1"><span class="badge bg-primary">8.2/10</span> 128 reviews</p>
-                            <p class="text-danger small mb-1">Free Cancellation</p>
-                            <p class="text-end fw-bold">$210</p>
+                    <!-- Property Card 3 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 rounded-4 shadow-sm border-0">
+                            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80"   style="height: 200px;" class="card-img-top rounded-top-4" alt="Westin Peachtree Plaza">
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold mb-2">The Westin Peachtree Plaza</h6>
+                                <p class="mb-2">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star text-warning"></i>
+                                </p>
+                                <span class="badge bg-primary" style="font-size:1rem;">8.2/10</span>
+                                <a href="#" class="ms-2 text-decoration-none fw-semibold" style="color:#1756e5;">(128 reviews)</a>
+                                <p class="text-danger small mb-1">Free Cancellation</p>
+                                <p class="text-end fw-bold">$210</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Promo Card -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 rounded-4 border-0 shadow-sm position-relative overflow-hidden" style="background: #eaf6fa;">
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" class="position-absolute top-0 start-0 w-100 h-100" style="object-fit:cover;opacity:0.6;" alt="Explore more properties">
+                            <div class="card-body d-flex flex-column justify-content-end align-items-start position-relative" style="z-index:2;">
+                                <h5 class="fw-bold mb-3" style="color:#fff;">Explore more featured properties</h5>
+                                <a href="#" class="btn btn-primary px-4 py-2 fw-semibold">Go Now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- End Featured Properties Section -->
 
         <!-- Popular Attractions Section -->
         <div class="container my-5" id="popular-attractions-section">
-            <div class="bg-white rounded-4 shadow-sm p-4" style="background: linear-gradient(to right, #f46e9d, #F1E5E8);">
-                <h2 class="fw-bold mb-3" style="font-size:2rem;">Popular Attractions</h2>
+            <div class="bg-white rounded-4 shadow-sm p-4" style="background:  linear-gradient(to right, #660033, #d16a92);">
+                <h2 class="fw-bold mb-3 text-white" style="font-size:2rem;">Popular Attractions</h2>
                 <div class="d-flex flex-wrap gap-3 mb-4">
                     <button class="btn btn-sm fw-semibold px-4 py-2" style="background:#150f17;color:#fff;box-shadow:0 2px 8px #e6e6f7;" >Bangkok</button>
                     <button class="btn btn-light fw-light px-4 py-2 btn-sm" style="box-shadow:0 8px 16px 0 rgba(15,41,77,.08)">Manila</button>
@@ -417,12 +442,12 @@
 
         <!-- Plan Your Train Travel Section -->
         <div class="container my-5" id="train-travel-section">
-            <div class="bg-white rounded-4 shadow-sm p-4" style="background:linear-gradient(to bottom, #f46e9d, #F1E5E8);">
-                <h2 class="fw-bold mb-3" style="font-size:2rem;">Plan Your Train Travel</h2>
+            <div class="bg-white rounded-4 shadow-sm p-4" style="background: linear-gradient(to bottom, #660033, #d16a92);">
+                <h2 class="fw-bold mb-3 text-white" style="font-size:2rem;">Plan Your Train Travel</h2>
                 <div class="d-flex flex-wrap gap-4 mb-4 align-items-center" style="font-size:1.1rem;">
-                    <span class="d-flex align-items-center gap-2"><span style="font-size:1.3em;">🚄</span> <span class="fw-semibold">Official Partner of Global Rail Operators</span></span>
-                    <span class="d-flex align-items-center gap-2"><span style="font-size:1.3em;">🎫</span> <span class="fw-semibold">Cheap Trains in Europe and Asia</span></span>
-                    <span class="d-flex align-items-center gap-2"><span style="font-size:1.3em;">💱</span> <span class="fw-semibold">Multiple Currencies Accepted</span></span>
+                    <span class="d-flex align-items-center gap-2"><span style="font-size:1.3em;">🚄</span> <span class="fw-semibold text-white">Official Partner of Global Rail Operators</span></span>
+                    <span class="d-flex align-items-center gap-2"><span style="font-size:1.3em;">🎫</span> <span class="fw-semibold text-white">Cheap Trains in Europe and Asia</span></span>
+                    <span class="d-flex align-items-center gap-2"><span style="font-size:1.3em;">💱</span> <span class="fw-semibold text-white">Multiple Currencies Accepted</span></span>
                 </div>
                 <div class="d-flex flex-wrap gap-3 mb-4">
                     <button class="btn fw-bold px-4 py-2" style="background:#181c23;color:#fff;box-shadow:0 2px 8px #e6e6f7;" disabled>UK Trains</button>
@@ -478,12 +503,12 @@
 
         <!-- Recommended Car Rentals Section -->
         <div class="container my-5" id="car-rentals-section">
-            <div class="bg-white rounded-4 shadow-sm p-4" style="background:linear-gradient(to left, #f46e9d, #F1E5E8);">
-                <h3 class="fw-bold mb-3" style="font-size:2rem;">Recommended Car Rentals</h3>
+            <div class="bg-white rounded-4 shadow-sm p-4" style="background: linear-gradient(to left, #660033, #d16a92);">
+                <h3 class="fw-bold mb-3 text-white" style="font-size:2rem;">Recommended Car Rentals</h3>
                 <div class="d-flex flex-wrap gap-4 mb-3 align-items-center" style="font-size:1.1rem;">
-                    <span class="d-flex align-items-center gap-2"><span style="font-size:1.3em;">🕒</span> <span class="fw-semibold text-success">Free Cancellations</span></span>
-                    <span class="d-flex align-items-center gap-2"><span style="font-size:1.3em;">✅</span> <span class="fw-semibold text-info">No Credit Card Fees</span></span>
-                    <span class="d-flex align-items-center gap-2"><span style="font-size:1.3em;">💬</span> <span class="fw-semibold text-primary">Reliable Support</span></span>
+                    <span class="d-flex align-items-center gap-2"><span style="font-size:1.3em;">🕒</span> <span class="fw-semibold text-white">Free Cancellations</span></span>
+                    <span class="d-flex align-items-center gap-2"><span style="font-size:1.3em;">✅</span> <span class="fw-semibold text-white">No Credit Card Fees</span></span>
+                    <span class="d-flex align-items-center gap-2"><span style="font-size:1.3em;">💬</span> <span class="fw-semibold text-white">Reliable Support</span></span>
                 </div>
                 <div class="d-flex flex-wrap gap-3 mb-4">
                     <button class="btn fw-bold px-4 py-2" style="background:#181c23;color:#fff;box-shadow:0 2px 8px #e6e6f7;" disabled>Orlando</button>
