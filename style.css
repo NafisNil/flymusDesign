@@ -45,16 +45,53 @@ body {
 
 @media (min-width: 992px) {
     .sidebar {
+        width: 220px;
         left: 0;
+        transition: width 0.3s;
+        overflow-x: hidden;
     }
-    .sidebar.hide {
-        left: -240px;
+    .sidebar.mini {
+        width: 60px; /* Only icons visible */
+    }
+    .sidebar a {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        white-space: nowrap;
+        transition: padding 0.3s;
+    }
+    .sidebar.mini a {
+        padding: 10px 10px;
+        justify-content: center;
+    }
+    .sidebar a i {
+        font-size: 1.3em;
+        margin-right: 16px;
+        transition: margin 0.3s;
+        min-width: 24px;
+        text-align: center;
+    }
+    .sidebar.mini a i {
+        margin-right: 0;
+    }
+    .sidebar-label {
+        transition: opacity 0.2s, width 0.2s;
+        opacity: 1;
+        width: auto;
+        display: inline-block;
+    }
+    .sidebar.mini .sidebar-label {
+        opacity: 0;
+        width: 0;
+        overflow: hidden;
+        pointer-events: none;
     }
     .main-content {
         margin-left: 220px;
+        transition: margin-left 0.3s;
     }
-    .main-content.sidebar-collapsed {
-        margin-left: 0;
+    .main-content.sidebar-mini {
+        margin-left: 60px;
     }
 }
 
@@ -434,6 +471,18 @@ body {
 
 .navbar-nav .btn-primary:hover {
     background: #a3476a;
+}
+
+.sidebar.mini a[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    left: 60px;
+    background: #222;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 9999;
 }
 
 

@@ -5,8 +5,8 @@ const mainContent = document.querySelector('.main-content');
 
 sidebarToggle.addEventListener('click', function() {
     if (window.innerWidth >= 992) {
-        sidebar.classList.toggle('hide');
-        mainContent.classList.toggle('sidebar-collapsed');
+        sidebar.classList.toggle('mini');
+        mainContent.classList.toggle('sidebar-mini');
     } else {
         sidebar.classList.toggle('show');
     }
