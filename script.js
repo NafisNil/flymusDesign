@@ -1,15 +1,19 @@
-
-// Sidebar toggle for mobile
+// Sidebar toggle for all screen sizes
 const sidebar = document.getElementById('sidebar');
 const sidebarToggle = document.getElementById('sidebarToggle');
-if (sidebarToggle) {
-    sidebarToggle.addEventListener('click', function() {
+const mainContent = document.querySelector('.main-content');
+
+sidebarToggle.addEventListener('click', function() {
+    if (window.innerWidth >= 992) {
+        sidebar.classList.toggle('hide');
+        mainContent.classList.toggle('sidebar-collapsed');
+    } else {
         sidebar.classList.toggle('show');
-    });
-}
-// Hide sidebar when clicking outside on mobile
+    }
+});
+// Hide sidebar when clicking outside (all screen sizes)
 document.addEventListener('click', function(e) {
-    if (window.innerWidth < 992 && sidebar.classList.contains('show')) {
+    if (sidebar.classList.contains('show')) {
         if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
             sidebar.classList.remove('show');
         }
