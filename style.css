@@ -201,47 +201,61 @@ body {
 .search-tabs {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 0;
-    border: none;
+    background: linear-gradient(90deg, #23242a 0%, #484a54 100%);
+    border-radius: 48px;
+    padding: 0 24px;
     margin-top: -32px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 0;
     position: relative;
     z-index: 2;
+    height: 50px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
 
 .search-tab {
-    background: #660033;
+    background: transparent;
     color: #fff;
     border: none;
-    border-radius: 32px 32px 0 0;
-    font-weight: 600;
-    font-size: 1.1rem;
-    padding: 12px 32px 12px 24px;
-    margin-right: 2px;
+    border-radius: 36px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0 22px;
+    height: 45px;
     display: flex;
     align-items: center;
-    gap: 0.7rem;
+    gap: 12px;
     transition: background 0.2s, color 0.2s;
+    margin: 0 2px;
     box-shadow: none;
-    z-index: 2;
+    outline: none;
 }
 
-.search-tab.active,
-.search-tab:focus {
-    background: #fff;
-    color: #660033;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    z-index: 3;
+
+/* Active Tab */
+.search-tab.active, .search-tab:focus {
+    background: #fff !important;
+    color: #23242a !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    font-weight: 600;
 }
 
 .search-tab i {
-    font-size: 1.3rem;
+    font-size: 0.9rem;
 }
 
 .search-tab:not(.active) {
     z-index: 2;
+     font-weight: 500;
 }
-
+/* Remove border on focus */
+.search-tab:focus {
+    outline: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
 .search-form-tabs {
     background: #fff;
     border-radius: 0 0 22px 22px;
@@ -487,3 +501,18 @@ body {
 
 
 
+/* new searchbar */
+/* ...existing code... */
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+    .search-tabs {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 8px;
+    }
+    .search-tab {
+        font-size: 1rem;
+        padding: 0 16px;
+        height: 44px;
+    }
+}
