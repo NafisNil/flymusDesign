@@ -17,9 +17,23 @@
 </head>
 
 <body>
-    <div class="header-bar d-flex flex-wrap align-items-center justify-content-between">
+    <!-- Responsive Header: Mobile -->
+    <div class="header-bar d-flex align-items-center d-flex d-lg-none">
+        <div class="d-flex align-items-center flex-grow-1 mobile-header-logo-search" style="gap: 5px;">
+            <img src="logo.png" alt="logo" style="width: 120px; height: 40px;">
+            <div class="input-group mobile-search-bar flex-grow-1" style="background: #fff; border-radius: 12px;">
+                <span class="input-group-text bg-white border-0 ps-2"><i class="bi bi-search" style="color: #b0b8c1;"></i> <input class="form-control border-0 bg-white" type="search" placeholder="Where to?" style="box-shadow: none;"></span>
+            </div>
+            <div class="mobile-header-bubble d-flex align-items-center gap-2 ms-2">
+                <i class="bi bi-person" style="font-size: 1.5rem; color: #d2d5e9;"></i>
+                <i class="bi bi bi-list" style="font-size: 1.5rem; color: #d2d5e9;"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Responsive Header: Desktop -->
+    <div class="header-bar d-none d-lg-flex flex-wrap align-items-center justify-content-between">
         <div class="d-flex align-items-center">
-            <button id="sidebarToggle" class="btn btn-link text-white p-0 me-2 "><i class="bi bi-list"></i></button>
+            <button id="sidebarToggle" class="btn btn-link text-white p-0 me-2"><i class="bi bi-list"></i></button>
             <a class="navbar-brand d-flex align-items-center m-0 me-3" href="#">
                 <img src="logo.png" alt="logo" style="width: 135px; height: 50px;">
             </a>
@@ -70,7 +84,8 @@
     </div>
 
     <div class="main-content">
-        <div class="hero">
+        <!-- Hero section: only visible on desktop -->
+        <div class="hero d-none d-lg-block">
             <div class="hero-content">
                 <div class="hero-title">Your Trip Starts Here</div>
                 <div class="hero-features mb-4">
@@ -220,17 +235,72 @@
                 </div>
             </div>
         </div>
+        <!-- Mobile Quick Actions Section: only visible on mobile -->
+        <div class="container d-block d-lg-none my-3">
+            <div class="row row-cols-4 g-3 text-center" style="margin-bottom: 0;">
+                <div class="col">
+                    <div class="mb-1"><i class="bi bi-house-door-fill mobile-quick-icon"></i></div>
+                    <div class="mobile-quick-label">Hotels & Homes</div>
+                </div>
+                <div class="col">
+                    <div class="mb-1"><i class="bi bi-airplane-fill mobile-quick-icon"></i></div>
+                    <div class="mobile-quick-label">Flights</div>
+                </div>
+                <div class="col">
+                    <div class="mb-1"><i class="bi bi-gift-fill mobile-quick-icon"></i></div>
+                    <div class="mobile-quick-label">Flight + Hotel</div>
+                </div>
+                <div class="col">
+                    <div class="mb-1"><i class="bi bi-train-front-fill mobile-quick-icon"></i></div>
+                    <div class="mobile-quick-label">Trains</div>
+                </div>
+            </div>
+            <div class="row row-cols-4 g-3 text-center mt-2">
+                <div class="col">
+                    <div class="mb-1"><i class="bi bi-car-front-fill mobile-quick-icon"></i></div>
+                    <div class="mobile-quick-label">Car Rentals</div>
+                </div>
+                <div class="col">
+                    <div class="mb-1"><i class="bi bi-taxi-front-fill mobile-quick-icon"></i></div>
+                    <div class="mobile-quick-label">Airport Transfers</div>
+                </div>
+                <div class="col">
+                    <div class="mb-1"><i class="bi bi-binoculars-fill mobile-quick-icon"></i></div>
+                    <div class="mobile-quick-label">Attractions & Tours</div>
+                </div>
+                <div class="col">
+                    <div class="mb-1"><i class="bi bi-journal-bookmark-fill mobile-quick-icon"></i></div>
+                    <div class="mobile-quick-label">Travel Guides</div>
+                </div>
+            </div>
+            <!-- Mobile Action Buttons -->
+            <div class="row mt-4 gx-3">
+                <div class="col-6">
+                    <button class="w-100 mobile-action-btn d-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-calendar-event-fill mobile-action-icon" style="color:#ff9800;"></i>
+                        <span class="mobile-action-label">Search Bookings</span>
+                    </button>
+                </div>
+                <div class="col-6">
+                    <button class="w-100 mobile-action-btn d-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-phone-fill mobile-action-icon" style="color:#2563eb;"></i>
+                        <span class="mobile-action-label">Add Flymus</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- End Mobile Quick Actions Section -->
 
         <div class="container my-5">
             <!-- Top Promo Banners -->
             <div class="row g-3 mt-5">
                 <div class="col-md-6">
-                    <div class="p-3 rounded text-white"
+                    <div class="p-3 d-none d-lg-block rounded text-white"
                         style="background-image: url('banner.jpeg');min-height: 155px;background-size: cover;">
 
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6  mobile-action-row">
                     <div id="destinationCarousel" class="carousel slide rounded" data-bs-ride="carousel"
                         style="height: 155px;">
                         <div class="carousel-indicators">
@@ -268,7 +338,26 @@
                         </button>
                     </div>
                 </div>
+                <div class="container d-block d-lg-none my-3">
+                    <div class="row justify-content-center align-items-center text-center mobile-feature-row ">
+                        <div class="col-12 d-flex flex-wrap justify-content-center align-items-center gap-1">
+                            <span class="mobile-feature-item d-flex align-items-center gap-1">
+                                <i class="bi bi-patch-check-fill mobile-feature-icon mobile-feature-icon-blue"></i>
+                                <span class="mobile-feature-label">Support in approx. 30s  <span class="mobile-feature-divider">|</span> <i class="bi bi-patch-check-fill mobile-feature-icon mobile-feature-icon-blue"></i>Travel Worry-free</span>
+                            </span>
+                            
 
+                        </div>
+                        
+                        <div class="col-12 d-flex justify-content-center align-items-center mt-2">
+                            <span class="mobile-feature-item d-flex align-items-center gap-2">
+                                <i class="bi bi-coin mobile-feature-icon mobile-feature-icon-yellow"></i>
+                                <span class="mobile-feature-label">Get Rewarded for Traveling</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Mobile Feature Row -->
             </div>
 
             <!-- Welcome Pack -->
@@ -317,6 +406,8 @@
                 
             </div>
         </div>
+            <!-- Mobile Feature Row: Only for mobile view -->
+
 
         <!-- Featured Properties Section -->
         <div class="container my-5" id="featured-properties-section">
@@ -850,6 +941,48 @@
         </footer>
 
     </div>
+
+    <!-- Mobile Quick Actions Section -->
+    <!-- <div class="container d-block d-lg-none my-3">
+        <div class="row row-cols-4 g-3 text-center" style="margin-bottom: 0;">
+            <div class="col">
+                <div class="mb-1"><i class="bi bi-house-door-fill mobile-quick-icon"></i></div>
+                <div class="mobile-quick-label">Hotels & Homes</div>
+            </div>
+            <div class="col">
+                <div class="mb-1"><i class="bi bi-airplane-fill mobile-quick-icon"></i></div>
+                <div class="mobile-quick-label">Flights</div>
+            </div>
+            <div class="col">
+                <div class="mb-1"><i class="bi bi-gift-fill mobile-quick-icon"></i></div>
+                <div class="mobile-quick-label">Flight + Hotel</div>
+            </div>
+            <div class="col">
+                <div class="mb-1"><i class="bi bi-train-front-fill mobile-quick-icon"></i></div>
+                <div class="mobile-quick-label">Trains</div>
+            </div>
+        </div>
+        <div class="row row-cols-4 g-3 text-center mt-2">
+            <div class="col">
+                <div class="mb-1"><i class="bi bi-car-front-fill mobile-quick-icon"></i></div>
+                <div class="mobile-quick-label">Car Rentals</div>
+            </div>
+            <div class="col">
+                <div class="mb-1"><i class="bi bi-taxi-front-fill mobile-quick-icon"></i></div>
+                <div class="mobile-quick-label">Airport Transfers</div>
+            </div>
+            <div class="col">
+                <div class="mb-1"><i class="bi bi-binoculars-fill mobile-quick-icon"></i></div>
+                <div class="mobile-quick-label">Attractions & Tours</div>
+            </div>
+            <div class="col">
+                <div class="mb-1"><i class="bi bi-journal-bookmark-fill mobile-quick-icon"></i></div>
+                <div class="mobile-quick-label">Travel Guides</div>
+            </div>
+        </div>
+    </div> -->
+    <!-- End Mobile Quick Actions Section -->
+
 
 
 

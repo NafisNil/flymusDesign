@@ -516,3 +516,203 @@ body {
         height: 44px;
     }
 }
+
+/* --- Mobile Header Customization --- */
+@media (max-width: 991.98px) {
+  .header-bar {
+    height: 46px;
+    padding: 0 10px;
+    background: #660033;
+    border-bottom: 1px solid #e6e6f7;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  }
+  .mobile-header-logo {
+    flex: 0 0 auto;
+    align-items: center;
+  }
+  .tripcom-logo-text {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #1756e5;
+    line-height: 1;
+    margin-right: 8px;
+  }
+  .mobile-search-bar {
+    flex: 1 1 auto;
+    max-width: 60vw;
+    margin: 0 8px;
+    background: #f7fafd;
+    border-radius: 12px;
+    /* height: 28px; */
+    align-items: center;
+    box-shadow: none;
+    min-width: 0;
+  }
+  .mobile-search-bar input.form-control {
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    color: #23242a;
+    padding-left: 0;
+    box-shadow: none;
+    height: 28px;
+  }
+  .mobile-search-bar .input-group-text {
+    background: transparent;
+    border: none;
+    padding-right: 0;
+    font-size: 1.2rem;
+  }
+  .mobile-header-icons {
+    flex: 0 0 auto;
+    gap: 10px !important;
+    color: #23242a !important;
+    align-items: center;
+  }
+  .desktop-header-items {
+    display: none !important;
+  }
+  .navbar-brand.d-lg-flex {
+    display: none !important;
+  }
+  .mobile-header-bubble {
+    /* border: 3px solid #00a3e0; */
+   
+    border-radius: 16px;
+    /* background: #fff; */
+    padding: 2px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    height: 40px;
+  }
+  .mobile-header-bubble i {
+    background: none;
+    border: none;
+    color: #23242a;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .tripcom-logo-text {
+    display: none !important;
+  }
+  .mobile-search-bar,
+  .mobile-header-icons {
+    display: none !important;
+  }
+  .desktop-header-items {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .mobile-quick-icon {
+    font-size: 1.5rem;
+    color: #660033;
+    background: #ebebeb;
+    border-radius: 50%;
+    padding: 13px;
+    margin-bottom: 4px;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+    display: inline-block;
+  }
+  .mobile-quick-label {
+    font-size: 0.8rem;
+    color: #444;
+    font-weight: 400;
+    margin-top: 2px;
+    line-height: 1;
+    letter-spacing: 0.01em;
+  }
+  .container .row.row-cols-4 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .mobile-action-btn {
+    background: #fff7e6;
+    border: none;
+    border-radius: 16px;
+    padding: 18px 0 16px 0;
+    font-weight: 600;
+    font-size: 1.08rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    transition: background 0.2s;
+    margin-bottom: 0;
+  }
+  .mobile-action-btn .mobile-action-icon {
+    font-size: 1rem;
+  
+  }
+  .mobile-action-label {
+    color: #222;
+    font-weight: 600;
+    font-size: 1.0rem;
+  }
+  .col-6:last-child .mobile-action-btn {
+    background: #f3f7ff;
+  }
+  .mobile-action-row {
+    margin-top: 0px !important;
+    padding-top: 0% !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #destinationCarousel {
+    height: 100px !important; /* or another value that fits your design */
+    min-height: 0 !important;
+  }
+  #destinationCarousel .carousel-inner,
+  #destinationCarousel .carousel-item,
+  #destinationCarousel img {
+    height: 100px !important; /* match the carousel height */
+    min-height: 0 !important;
+    object-fit: cover; /* or 'contain' if you want to see the whole image */
+    width: 100%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .mobile-feature-row {
+    background: #f6f8fa;
+    border-radius: 14px;
+    padding: 6px 0 6px 0;
+    margin-bottom: 0;
+  }
+  .mobile-feature-item {
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .mobile-feature-icon {
+    font-size: 1rem;
+    vertical-align: middle;
+  }
+  .mobile-feature-icon-blue {
+    color: #00b3b9;
+    background: none;
+  }
+  .mobile-feature-icon-yellow {
+    color: #ffb300;
+    background: none;
+  }
+  .mobile-feature-label {
+    color: #555;
+    font-weight: 500;
+    /* font-size: 1.08rem; */
+  }
+  .mobile-feature-divider {
+    color: #bbb;
+    font-size: 1.2rem;
+    margin: 0 8px;
+    font-weight: 400;
+  }
+}
