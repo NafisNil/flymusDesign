@@ -716,3 +716,72 @@ body {
     font-weight: 400;
   }
 }
+
+
+.mobile-quick-icon-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    background: #ebebeb;
+    border-radius: 50%;
+    padding: 18px;
+    margin-bottom: 4px;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+    display: inline-block;
+}
+
+
+@media (max-width: 991.98px) {
+    .spotlight-slider-row {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      overflow-x: auto;
+      /* gap: 16px; */
+      margin-left: -8px;
+      margin-right: -8px;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 8px;
+    }
+    .spotlight-slider-row > .col-12 {
+      flex: 0 0 80%;
+      max-width: 80%;
+      min-width: 260px;
+      scroll-snap-align: start;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .spotlight-slider-row::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    /* Make card content smaller in slider sections for mobile */
+    .spotlight-slider-row .card-title,
+    .spotlight-slider-row .fw-bold,
+    .spotlight-slider-row .fw-semibold {
+      font-size: 1rem !important;
+    }
+    .spotlight-slider-row .card-body,
+    .spotlight-slider-row .card {
+      font-size: 0.92rem;
+    }
+    .spotlight-slider-row .badge {
+      font-size: 0.85rem !important;
+      padding: 0.35em 0.6em;
+    }
+    .spotlight-slider-row .btn,
+    .spotlight-slider-row .fw-light {
+      font-size: 0.95rem !important;
+    }
+  }
+
+@media (max-width: 991.98px) {
+  /* Make feature spans above the slider cards smaller on mobile */
+  #featured-properties-section .d-flex.gap-4 span,
+  #popular-attractions-section .d-flex.gap-3 span,
+  #train-travel-section .d-flex.gap-4 span,
+  #car-rentals-section .d-flex.gap-4 span {
+    font-size: 0.95rem !important;
+  }
+}
