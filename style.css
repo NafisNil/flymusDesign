@@ -44,6 +44,21 @@ body {
 }
 
 @media (min-width: 992px) {
+  #featured-properties-section
+ {
+  background: linear-gradient(to top, #660033, #81415a);
+
+}
+#popular-attractions-section{
+  background: linear-gradient(to left, #660033, #81415a);
+}
+#train-travel-section{
+  background: linear-gradient(to right, #660033, #81415a);
+}
+#car-rentals-section{
+  background: linear-gradient(to bottom, #660033, #81415a);
+}
+
     .sidebar {
         width: 220px;
         left: 0;
@@ -746,9 +761,9 @@ body {
       padding-bottom: 8px;
     }
     .spotlight-slider-row > .col-12 {
-      flex: 0 0 80%;
-      max-width: 80%;
-      min-width: 260px;
+      flex: 0 0 65%;
+      max-width: 65%;
+      min-width: 220px;
       scroll-snap-align: start;
       margin-left: 5px;
       margin-right: 5px;
@@ -780,11 +795,71 @@ body {
   }
 
 @media (max-width: 991.98px) {
-  /* Make feature spans above the slider cards smaller on mobile */
-  #featured-properties-section .d-flex.gap-4 span,
-  #popular-attractions-section .d-flex.gap-3 span,
-  #train-travel-section .d-flex.gap-4 span,
-  #car-rentals-section .d-flex.gap-4 span {
-    font-size: 0.95rem !important;
+  #featured-properties-section,
+  #popular-attractions-section,
+  #train-travel-section,
+  #car-rentals-section {
+    background: rgba(0,0,0,0) !important;
+  }
+  #featured-properties-section .text-white,
+  #popular-attractions-section .text-white,
+  #train-travel-section .text-white,
+  #car-rentals-section .text-white {
+    color: #23242a !important;
+  }
+  #featured-properties-section [style*="color:#fff"],
+  #popular-attractions-section [style*="color:#fff"],
+  #train-travel-section [style*="color:#fff"],
+  #car-rentals-section [style*="color:#fff"] {
+    color: #23242a !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #featured-properties-section .card[data-bg],
+  #popular-attractions-section .card[data-bg],
+  #train-travel-section .card[data-bg],
+  #car-rentals-section .card[data-bg],
+  .where-card[data-bg] {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    min-height: 260px;
+    overflow: hidden;
+    border-radius: 18px;
+   
+  }
+  #featured-properties-section .card[data-bg]::before,
+  #popular-attractions-section .card[data-bg]::before,
+  #train-travel-section .card[data-bg]::before,
+  #car-rentals-section .card[data-bg]::before,
+  .where-card[data-bg]::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.18); /* slight overlay for readability */
+    z-index: 1;
+    border-radius: inherit;
+  }
+  #featured-properties-section .card[data-bg] .card-body,
+  #popular-attractions-section .card[data-bg] .card-body,
+  #train-travel-section .card[data-bg] .card-body,
+  #car-rentals-section .card[data-bg] .card-body,
+  .where-card[data-bg] .position-absolute.bottom-0 {
+    /* background: rgba(0,0,0,0.32);  */
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    border-radius: 0 0 18px 18px;
+    padding: 18px;
+     align-content: flex-end;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .card[data-bg] .card-img-top,
+  .where-card[data-bg] .card-img-top {
+    display: none !important;
   }
 }

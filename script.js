@@ -35,4 +35,18 @@ document.querySelectorAll('.search-tab').forEach(tab => {
     });
 });
 
+function setCardBackgrounds() {
+  if (window.innerWidth <= 991.98) {
+    document.querySelectorAll('.card[data-bg], .where-card[data-bg]').forEach(card => {
+      card.style.backgroundImage = `url('${card.getAttribute('data-bg')}')`;
+    });
+  } else {
+    document.querySelectorAll('.card[data-bg], .where-card[data-bg]').forEach(card => {
+      card.style.backgroundImage = '';
+    });
+  }
+}
+window.addEventListener('resize', setCardBackgrounds);
+window.addEventListener('DOMContentLoaded', setCardBackgrounds);
+
 
