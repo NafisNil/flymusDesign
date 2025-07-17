@@ -801,11 +801,19 @@ body {
   #car-rentals-section {
     background: rgba(0,0,0,0) !important;
   }
+
+  #featured-properties-section,
+  #popular-attractions-section,
+  #train-travel-section,
+  #car-rentals-section {
+    /* font-size: 1.2rem !important; */
+  }
   #featured-properties-section .text-white,
   #popular-attractions-section .text-white,
   #train-travel-section .text-white,
   #car-rentals-section .text-white {
     color: #23242a !important;
+    font-size: 0.8rem;
   }
   #featured-properties-section [style*="color:#fff"],
   #popular-attractions-section [style*="color:#fff"],
