@@ -138,6 +138,7 @@ background: linear-gradient(to bottom, #660033, #81415a);
     justify-content: stretch;
     align-items: stretch; 
   }
+
   .row.my-4.bg-primary .welcome-pack-col {
     display: flex;
     flex-direction: column;
@@ -152,7 +153,7 @@ background: linear-gradient(to bottom, #660033, #81415a);
   .claim_all_btn {
     width: 100%;
     height: 30px;
-    font-size: 12px;
+    font-size: 9px;
     font-weight: 600;
 
   }
@@ -160,7 +161,12 @@ background: linear-gradient(to bottom, #660033, #81415a);
     padding-bottom: 4px;
   }
 }
-
+.welcome-pack-col .card {
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  min-width: 0; /* Ensures it doesn't overflow */
+}
 @media (max-width: 767.98px) {
   .hero {
       padding: 40px 10px;
